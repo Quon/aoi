@@ -1,4 +1,4 @@
-纯lua实现的AOI(Area Of Interest)模块(pa pure lua implement aoi module)
+纯lua实现的AOI(Area Of Interest)模块(a pure lua implement aoi module)
 ======================
 ## 来源
 算法来自于[云风](http://blog.codingnow.com/2012/03/dev_note_13.html)，接口也基本相同
