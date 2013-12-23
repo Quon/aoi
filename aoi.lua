@@ -118,18 +118,19 @@ local function flush_pair(aoi_space)
 			p.marker.version ~= p.marker_version or
 			p.watcher.mode.MODE_DROP or
 			p.marker.mode.MODE_DROP then
-			p = next
+			aoi_space.hot = next
 		else
 			local d2 = dist2(p.watcher , p.marker)
 			if d2 > AOI_RADIS2 * 4 then
-				p = next
+				aoi_space.hot = next
 			elseif d2 < AOI_RADIS2 then
 				aoi_space.cb(p.watcher.id, p.marker.id)
-				p = next
+				aoi_space.hot = next
 			else
 				aoi_space.hot = p.next
 			end
 		end
+		p = next
 	end
 end
 
